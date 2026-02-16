@@ -8,7 +8,7 @@ def generator_numbers(text: str):
     # Iterate over all matches in the text
     for match in re.finditer(pattern, text):
         # Extract the numeric part (without surrounding spaces)
-        number_str = match.group(1)
+        number_str = match.group(0)
 
         # Convert to float and yield one number at a time
         yield float(number_str)
